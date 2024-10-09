@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Variations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .variation {
+            margin: 10px;
+            font-size: 24px;
+        }
+        .rotate {
+            animation: rotate 2s infinite;
+        }
+        .fade {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        .scale {
+            transform: scale(1.5);
+            transition: transform 0.5s;
+        }
+        .color {
+            color: red;
+            transition: color 0.5s;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello World Variations</h1>
+    <div id="output"></div>
+
+    <script>
+        const output = document.getElementById('output');
+
+        const text1 = document.createElement('div');
+        text1.classList.add('variation');
+        text1.textContent = "Hello World";
+        output.appendChild(text1);
+
+        const text2 = document.createElement('div');
+        text2.classList.add('variation');
+        text2.innerHTML = "<strong>Hello World</strong>";
+        output.appendChild(text2);
+
+        const text3 = document.createElement('div');
+        text3.classList.add('variation');
+        text3.innerHTML = "<em>Hello World</em>";
+        output.appendChild(text3);
+
+        const text4 = document.createElement('div');
+        text4.classList.add('variation', 'color');
+        text4.textContent = "Hello World";
+        output.appendChild(text4);
+
+        const text5 = document.createElement('div');
+        text5.classList.add('variation', 'rotate');
+        text5.textContent = "Hello World";
+        output.appendChild(text5);
+
+        const text6 = document.createElement('div');
+        text6.classList.add('variation', 'fade');
+        text6.textContent = "Hello World";
+        output.appendChild(text6);
+
+        const text7 = document.createElement('div');
+        text7.classList.add('variation', 'scale');
+        text7.textContent = "Hello World";
+        output.appendChild(text7);
+
+  
+        const text8 = document.createElement('div');
+        text8.classList.add('variation');
+        text8.style.textShadow = "2px 2px 5px grey";
+        text8.textContent = "Hello World";
+        output.appendChild(text8);
+
+        const text9 = document.createElement('div');
+        text9.classList.add('variation');
+        text9.style.backgroundColor = "lightblue";
+        text9.textContent = "Hello World";
+        output.appendChild(text9);
+
+    
+        const text10 = document.createElement('div');
+        text10.classList.add('variation');
+        text10.style.border = "2px solid black";
+        text10.style.padding = "5px";
+        text10.textContent = "Hello World";
+        output.appendChild(text10);
+    </script>
+
+</body>
+</html>
